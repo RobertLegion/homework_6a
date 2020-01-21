@@ -2,14 +2,13 @@ package com.infoshareacademy.dao;
 
 import com.infoshareacademy.model.ModelInterface;
 
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-@Stateless
-public class GenericDao<Entity extends ModelInterface<Id>, Id> {
+
+public abstract class GenericDao<Entity extends ModelInterface<Id>, Id> {
     @PersistenceContext
     EntityManager entityManager;
     Class<Entity> entityClass;
@@ -19,7 +18,7 @@ public class GenericDao<Entity extends ModelInterface<Id>, Id> {
     }
 
     public Id save(Entity o) {
-        entityManager.persist(o);
+        entityManager.merge(o);
         return o.getId();
     }
 

@@ -4,14 +4,13 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
+
 @Entity
 @Table(name = "TEACHERS")
-@NamedQueries({
-        @NamedQuery(
+@NamedQuery(
                 name = "Teacher.findAll",
                 query = "SELECT s FROM Teacher s"
         )
-})
 public class Teacher implements ModelInterface<String> {
 
     @Id
@@ -32,11 +31,7 @@ public class Teacher implements ModelInterface<String> {
         return pesel;
     }
 
-    public String getPesel() {
-        return pesel;
-    }
-
-    public void setPesel(String pesel) {
+    public void setId(String pesel) {
         this.pesel = pesel;
     }
 

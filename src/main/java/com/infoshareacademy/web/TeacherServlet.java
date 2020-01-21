@@ -120,7 +120,7 @@ public class TeacherServlet extends HttpServlet {
         final Teacher t = new Teacher();
         t.setName(req.getParameter("name"));
         t.setSurname(req.getParameter("surname"));
-        t.setPesel(req.getParameter("pesel"));
+        t.setId(req.getParameter("pesel"));
 
         String courseName = req.getParameter("courseName");
         Course course = courseDao.findByName(courseName);
