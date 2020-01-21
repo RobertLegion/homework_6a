@@ -14,6 +14,7 @@ public class CourseSummary implements ModelInterface<String> {
         this.courseName = courseName;
         this.attendees = attendees;
         this.teachers = teachers;
+
     }
 
     public String getId(){

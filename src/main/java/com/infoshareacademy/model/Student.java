@@ -52,7 +52,7 @@ public class Student implements ModelInterface<Long> {
 // COURSES
     private List<Course> courses;
 
-    public Student() {
+    public Student(){
 
     }
 

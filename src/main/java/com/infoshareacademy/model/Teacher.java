@@ -3,21 +3,19 @@ package com.infoshareacademy.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
-
-
-@Entity
-@Table(name = "TEACHERS")
 @NamedQueries({
         @NamedQuery(
                 name = "Teacher.findAll",
                 query = "SELECT s FROM Teacher s"
         )
 })
+
+@Entity
+@Table(name = "TEACHERS")
 public class Teacher implements ModelInterface<String> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "pesel")
+    @Column(name = "pesel", length = 11)
     private String pesel;
 
     @Column(name = "name")
@@ -69,7 +67,8 @@ public class Teacher implements ModelInterface<String> {
 // COURSES
     private List<Course> courses;
 
-    public Teacher() {
+    public Teacher(){
+
     }
 
     public Teacher(String pesel, String name, String surname, List<Course> courses) {

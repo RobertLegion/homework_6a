@@ -5,6 +5,7 @@
         version="3.1">
 
 
+
     <data-source>
         <name>java:ds/demods</name>
         <class-name>com.mysql.cj.jdbc.MysqlDataSource</class-name>
@@ -14,14 +15,15 @@
         <user>root</user>
         <password>root</password>
     </data-source>
-<!--    <servlet>-->
-<!--        <servlet-name>TeacherServlet</servlet-name>-->
-<!--        <servlet-class>com.infoshareacademy.web.TeacherServlet</servlet-class>-->
-<!--        <load-on-startup>1</load-on-startup>-->
-<!--    </servlet>-->
+<!--&lt;!&ndash;    <servlet>&ndash;&gt;-->
+<!--&lt;!&ndash;        <servlet-name>TeacherServlet</servlet-name>&ndash;&gt;-->
+<!--&lt;!&ndash;        <servlet-class>com.infoshareacademy.web.TeacherServlet</servlet-class>&ndash;&gt;-->
+<!--&lt;!&ndash;        <load-on-startup>1</load-on-startup>&ndash;&gt;-->
+<!--&lt;!&ndash;    </servlet>&ndash;&gt;-->
 <!--    <servlet>-->
 <!--        <servlet-name>StudentServlet</servlet-name>-->
-<!--        <servlet-class>com.infoshareacademy.web.TeacherServlet</servlet-class>-->
-<!--        <load-on-startup>2</load-on-startup>-->
+<!--        <servlet-class>com.infoshareacademy.web.StudentServlet</servlet-class>-->
+<!--        <load-on-startup>1</load-on-startup>-->
 <!--    </servlet>-->
+
 </web-app>

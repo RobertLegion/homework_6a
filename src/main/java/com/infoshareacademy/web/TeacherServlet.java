@@ -8,6 +8,7 @@ import com.infoshareacademy.model.Teacher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 import javax.inject.Inject;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -34,31 +35,32 @@ public class TeacherServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
+        super.init(config);
         // Test data
 
-        // Courses
-        Course course1 = new Course("JJDD6");
-        Course course2 = new Course("JJDZ6");
-        Course course3 = new Course("JJFD9");
-
-        // Teachers
-        Teacher t1 = new Teacher("99999999818",
-                "Chuck",
-                "Norris",
-                Arrays.asList(course1, course2, course3));
-        teacherDao.save(t1);
-
-        Teacher t2 = new Teacher("11010111101",
-                "Donald",
-                "Trump",
-                Arrays.asList(course2, course3));
-        teacherDao.save(t2);
-
-        Teacher t3 = new Teacher("12345678900",
-                "Team",
-                "A",
-                Arrays.asList(course1, course3));
-        teacherDao.save(t3);
+//        // Courses
+//        Course course1 = new Course("JJD6Z");
+//        Course course2 = new Course("JJZ67");
+//        Course course3 = new Course("JFD99");
+//
+//        // Teachers
+//        Teacher t1 = new Teacher("99999999818",
+//                "Chuck",
+//                "Norris",
+//                Arrays.asList(course1, course2, course3));
+//        teacherDao.save(t1);
+//
+//        Teacher t2 = new Teacher("11010111101",
+//                "Donald",
+//                "Trump",
+//                Arrays.asList(course2, course3));
+//        teacherDao.save(t2);
+//
+//        Teacher t3 = new Teacher("12345678900",
+//                "Team",
+//                "A",
+//                Arrays.asList(course1, course3));
+//        teacherDao.save(t3);
     }
 
     @Override
@@ -84,6 +86,7 @@ public class TeacherServlet extends HttpServlet {
         } else {
             resp.getWriter().write("Unknown action.");
         }
+
     }
 
     private void updateTeacher(HttpServletRequest req, HttpServletResponse resp)
