@@ -28,9 +28,9 @@ public class TeacherServlet extends HttpServlet {
 
     @Inject
     private TeacherDao teacherDao;
-
     @Inject
     private CourseDao courseDao;
+
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -38,16 +38,11 @@ public class TeacherServlet extends HttpServlet {
 
         // Courses
         Course course1 = new Course("JJDD6");
-        courseDao.save(course1);
-
         Course course2 = new Course("JJDZ6");
-        courseDao.save(course2);
-
         Course course3 = new Course("JJFD9");
-        courseDao.save(course3);
 
         // Teachers
-        Teacher t1 = new Teacher("99999999999",
+        Teacher t1 = new Teacher("99999999818",
                 "Chuck",
                 "Norris",
                 Arrays.asList(course1, course2, course3));

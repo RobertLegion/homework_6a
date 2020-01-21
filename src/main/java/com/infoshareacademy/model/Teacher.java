@@ -7,10 +7,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "TEACHERS")
-@NamedQuery(
+@NamedQueries({
+        @NamedQuery(
                 name = "Teacher.findAll",
                 query = "SELECT s FROM Teacher s"
         )
+})
 public class Teacher implements ModelInterface<String> {
 
     @Id
